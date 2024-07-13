@@ -1,6 +1,10 @@
+//Nofar Skouri 211939939
+//Talia Mulokandov 212615421
+
 const mongoose = require('mongoose');
+
+// Define the schema for the user collection
 const userSchema = new mongoose.Schema({
-    // id, first_name, last_name, and birthday.
 
     id: {
         type: Number,
@@ -21,5 +25,8 @@ const userSchema = new mongoose.Schema({
 
 });
 
+// Create the User model using the defined schema
 const User = mongoose.model('users', userSchema);
+
+// Export the User model for use in other parts of the application
 module.exports = User;

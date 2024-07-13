@@ -1,6 +1,10 @@
+//Nofar Skouri 211939939
+//Talia Mulokandov 212615421
+
 const mongoose = require('mongoose');
+
+// Define the schema for the calorie entries
 const calorieSchema = new mongoose.Schema({
-    //user_id, year, month, day, id, description, category, and amount
 
     user_id: {
         type: Number,
@@ -37,5 +41,8 @@ const calorieSchema = new mongoose.Schema({
     }
 });
 
+// Create the Calorie model using the defined schema
 const Calorie = mongoose.model('calories', calorieSchema);
+
+// Export the Calorie model for use in other parts of the application
 module.exports = Calorie;
