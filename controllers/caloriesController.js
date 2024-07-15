@@ -1,12 +1,12 @@
 //Nofar Skouri 211939939
 //Talia Mulokandov 212615421
 
-const Calorie = require('../models/caloriesModel');
-const Counter = require('../models/counterModel');
+const calorieModle = require('../models/caloriesModel');
+const counterModle = require('../models/counterModel');
 
 // Function to get the next sequence number for a given counter name
 const getNextSequence = async (name) => {
-    const counter = await Counter.findByIdAndUpdate(
+    const counter = await counterModle.findByIdAndUpdate(
         name,
         // Increment the sequence number by 1
         { $inc: { seq: 1 } },
@@ -25,7 +25,7 @@ exports.addCalorie = async (req, res) => {
         const id = await getNextSequence('calorieId');
 
         // Create a new Calorie with the provided data
-        const newCalorie = new Calorie({ user_id, year, month, day, id, description, category, amount });
+        const newCalorie = new calorieModle({ user_id, year, month, day, id, description, category, amount });
 
         // Save the new calorie entry in the database
         await newCalorie.save();
@@ -54,7 +54,7 @@ exports.getReport = async (req, res) => {
         const numericMonth = parseInt(month);
 
         // Query the database for calorie entries matching the specified criteria
-        const calories = await Calorie.find({
+        const calories = await calorieModle.find({
             user_id: numericUserId,
             year: numericYear,
             month: numericMonth

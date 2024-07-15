@@ -1,7 +1,7 @@
 //Nofar Skouri 211939939
 //Talia Mulokandov 212615421
 
-const User = require('../models/usersModel');
+const userModle = require('../models/usersModel');
 
 // Controller function to get user details by ID
 exports.getUserById = async (req, res) => {
@@ -10,7 +10,7 @@ exports.getUserById = async (req, res) => {
         const userId = parseInt(req.params.id);
 
         // Find the user in the database by their ID
-        const user = await User.findOne({ id: userId });
+        const user = await userModle.findOne({ id: userId });
 
         // If the user is not found, send a 404 response
         if (!user) {
