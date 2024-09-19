@@ -18,8 +18,8 @@ app.use(usersRoutes);
 // Define a route for '/about' that responds with a JSON array
 app.get('/about', function (req, res) {
     res.status(200).json(
-        [{ "firstname": "Nofar", "lastname": "Skouri", "id": 211939939, "email": "nofar1608@gmail.com" },
-        { "firstname": "Talia", "lastname": "Mulokandov", "id": 212615421, "email": "taliamulo@gmail.com" }]);
+        [{ "firstname": "", "lastname": "", "id": 123, "email": "" },
+        { "firstname": "", "lastname": "", "id": 456, "email": "" }]);
 });
 
 // Connect to the database and start the server
