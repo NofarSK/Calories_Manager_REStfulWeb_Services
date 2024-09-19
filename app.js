@@ -1,6 +1,3 @@
-//Nofar Skouri 211939939
-//Talia Mulokandov 212615421
-
 const express = require('express');
 const connectDB = require('./database');
 const caloriesRoutes = require('./routes/caloriesRoutes');

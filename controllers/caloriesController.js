@@ -1,6 +1,3 @@
-//Nofar Skouri 211939939
-//Talia Mulokandov 212615421
-
 const calorieModle = require('../models/caloriesModel');
 const counterModle = require('../models/counterModel');
 

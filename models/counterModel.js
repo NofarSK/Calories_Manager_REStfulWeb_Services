@@ -1,6 +1,3 @@
-//Nofar Skouri 211939939
-//Talia Mulokandov 212615421
-
 const mongoose = require('mongoose');
 
 // Define the schema for the counter collection

@@ -1,6 +1,3 @@
-//Nofar Skouri 211939939
-//Talia Mulokandov 212615421
-
 const userModle = require('../models/usersModel');
 
 // Controller function to get user details by ID
